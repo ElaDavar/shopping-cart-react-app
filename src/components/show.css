@@ -10,4 +10,24 @@
 
 .ant-card {
   margin: 5px;
+  border-right: none;
+  border-left: none;
+}
+
+.ant-card-meta {
+  text-align: center;
+}
+
+.ant-card-actions {
+  border: none;
+}
+
+.anticon svg {
+  fill: #c92976;
+}
+
+.ant-btn-round {
+  border-color: #c92976;
+  background-color: #c92976;
+  color: white;
 }

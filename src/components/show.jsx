@@ -1,61 +1,91 @@
 import React from 'react';
-import { Row, Col, Card } from 'antd';
-import { ShoppingOutlined, HeartOutlined } from '@ant-design/icons';
+import { Row, Col, Card, Button } from 'antd';
+import {
+  PlusCircleOutlined,
+  ShoppingOutlined,
+  HeartOutlined,
+  DeleteOutlined,
+  ShoppingFilled,
+  HeartFilled } from '@ant-design/icons';
+import product1 from '../assets/product1.png';
+import product2 from '../assets/product2.png';
+import product3 from '../assets/product3.png';
+import product4 from '../assets/product4.png';
 import 'antd/dist/antd.css';
 import './show.css';
 
 function Show() {
 
   const { Meta } = Card;
-  const shopTitle = (<><ShoppingOutlined /> Shopping cart</>);
-  const wishTtitle = (<><HeartOutlined /> Wish list</>);
+  const shopTitle = (<><ShoppingFilled /> Shopping cart</>);
+  const wishTtitle = (<><HeartFilled /> Wish list</>);
 
   return (
     <div className="Show">
       <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-        <Col className="gutter-row">
-          <Card title={shopTitle}>
+        <Col>
+          <Card title={shopTitle} extra={<Button shape="round">Checkout</Button>}>
             <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-            <Col className="gutter-row">
+            <Col>
               <Card
                 hoverable
                 style={{ width: 240 }}
-                cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
+                cover={<img alt="example" src={product1}  style={{ height: 240 }}/>}
+                actions={[
+                  <PlusCircleOutlined key="add" />,
+                  <DeleteOutlined key="delete" />,
+                  <HeartOutlined key="wish" />,
+                ]}
               >
-                <Meta title="1Europe Street beat" description="www.instagram.com" />
+                <Meta title="title" description="description" />
               </Card>
               </Col>
-              <Col className="gutter-row">
+              <Col>
               <Card
                 hoverable
                 style={{ width: 240 }}
-                cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
+                cover={<img alt="example" src={product2}  style={{ height: 240 }}/>}
+                actions={[
+                  <PlusCircleOutlined key="add" />,
+                  <DeleteOutlined key="delete" />,
+                  <HeartOutlined key="wish" />,
+                ]}
               >
-                <Meta title="2Europe Street beat" description="www.instagram.com" />
+                <Meta title="title" description="description" />
               </Card>
             </Col>
           </Row>
           </Card>
         </Col>
-        <Col className="gutter-row">
+        <Col>
           <Card title={wishTtitle}>
             <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-            <Col className="gutter-row">
+            <Col>
               <Card
                 hoverable
                 style={{ width: 240 }}
-                cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
+                cover={<img alt="example" src={product3}  style={{ height: 240 }}/>}
+                actions={[
+                  <PlusCircleOutlined key="add" />,
+                  <DeleteOutlined key="delete" />,
+                  <ShoppingOutlined key="shop" />,
+                ]}
               >
-                <Meta title="3Europe Street beat" description="www.instagram.com" />
+                <Meta title="title" description="description" />
               </Card>
               </Col>
-              <Col className="gutter-row">
+              <Col>
               <Card
                 hoverable
                 style={{ width: 240 }}
-                cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
+                cover={<img alt="example" src={product4}  style={{ height: 240 }}/>}
+                actions={[
+                  <PlusCircleOutlined key="add" />,
+                  <DeleteOutlined key="delete" />,
+                  <ShoppingOutlined key="shop" />,
+                ]}
               >
-                <Meta title="4Europe Street beat" description="www.instagram.com" />
+                <Meta title="title" description="description" />
               </Card>
             </Col>
           </Row>

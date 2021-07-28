@@ -1,0 +1,13 @@
+.Show {
+  margin: 40px;
+}
+
+.ant-row {
+  margin: 0px;
+  row-gap: 10px;
+  justify-content: center;
+}
+
+.ant-card {
+  margin: 5px;
+}

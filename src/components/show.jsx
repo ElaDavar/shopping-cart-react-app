@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col, Card, Button } from 'antd';
+import { Row, Col, Card, Button, InputNumber } from 'antd';
 import {
   PlusCircleOutlined,
   ShoppingOutlined,
@@ -26,69 +26,67 @@ function Show() {
         <Col>
           <Card title={shopTitle} extra={<Button shape="round">Checkout</Button>}>
             <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-            <Col>
-              <Card
-                hoverable
-                style={{ width: 240 }}
-                cover={<img alt="example" src={product1}  style={{ height: 240 }}/>}
-                actions={[
-                  <PlusCircleOutlined key="add" />,
-                  <DeleteOutlined key="delete" />,
-                  <HeartOutlined key="wish" />,
-                ]}
-              >
-                <Meta title="title" description="description" />
-              </Card>
+              <Col>
+                <Card
+                  hoverable
+                  style={{ width: 240 }}
+                  cover={<img alt="example" src={product1}  style={{ height: 240 }}/>}
+                  actions={[
+                    <InputNumber min={1} max={10} defaultValue={1}/>,
+                    <DeleteOutlined key="delete" />,
+                    <HeartOutlined key="wish" />,
+                  ]}
+                >
+                  <Meta title="Name" description="Price & description" />
+                </Card>
               </Col>
               <Col>
-              <Card
-                hoverable
-                style={{ width: 240 }}
-                cover={<img alt="example" src={product2}  style={{ height: 240 }}/>}
-                actions={[
-                  <PlusCircleOutlined key="add" />,
-                  <DeleteOutlined key="delete" />,
-                  <HeartOutlined key="wish" />,
-                ]}
-              >
-                <Meta title="title" description="description" />
-              </Card>
-            </Col>
-          </Row>
+                <Card
+                  hoverable
+                  style={{ width: 240 }}
+                  cover={<img alt="example" src={product2}  style={{ height: 240 }}/>}
+                  actions={[
+                    <InputNumber min={1} max={10} defaultValue={1}/>,
+                    <DeleteOutlined key="delete" />,
+                    <HeartOutlined key="wish" />,
+                  ]}
+                >
+                  <Meta title="Name" description="Price & description" />
+                </Card>
+              </Col>
+            </Row>
           </Card>
         </Col>
         <Col>
           <Card title={wishTtitle}>
             <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-            <Col>
-              <Card
-                hoverable
-                style={{ width: 240 }}
-                cover={<img alt="example" src={product3}  style={{ height: 240 }}/>}
-                actions={[
-                  <PlusCircleOutlined key="add" />,
-                  <DeleteOutlined key="delete" />,
-                  <ShoppingOutlined key="shop" />,
-                ]}
-              >
-                <Meta title="title" description="description" />
-              </Card>
+              <Col>
+                <Card
+                  hoverable
+                  style={{ width: 240 }}
+                  cover={<img alt="example" src={product3}  style={{ height: 240 }}/>}
+                  actions={[
+                    <DeleteOutlined key="delete" />,
+                    <ShoppingOutlined key="shop" />,
+                  ]}
+                >
+                  <Meta title="Name" description="Price & description" />
+                </Card>
               </Col>
               <Col>
-              <Card
-                hoverable
-                style={{ width: 240 }}
-                cover={<img alt="example" src={product4}  style={{ height: 240 }}/>}
-                actions={[
-                  <PlusCircleOutlined key="add" />,
-                  <DeleteOutlined key="delete" />,
-                  <ShoppingOutlined key="shop" />,
-                ]}
-              >
-                <Meta title="title" description="description" />
-              </Card>
-            </Col>
-          </Row>
+                <Card
+                  hoverable
+                  style={{ width: 240 }}
+                  cover={<img alt="example" src={product4}  style={{ height: 240 }}/>}
+                  actions={[
+                    <DeleteOutlined key="delete" />,
+                    <ShoppingOutlined key="shop" />,
+                  ]}
+                >
+                  <Meta title="Name" description="Price & description" />
+                </Card>
+              </Col>
+            </Row>
           </Card>
         </Col>
       </Row>

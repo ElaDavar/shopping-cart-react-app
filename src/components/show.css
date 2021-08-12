@@ -31,3 +31,17 @@
   background-color: #c92976;
   color: white;
 }
+
+.ant-card-extra {
+  padding: 13px 0px;
+}
+
+.ant-input-number {
+  color: #c92976;
+  border: 1px solid #c92976;
+  width: 50px;
+}
+
+.ant-input-number-input {
+  height: 23px;
+}
